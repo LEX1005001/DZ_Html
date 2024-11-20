@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица с фиксированными заголовками и столбцами</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 200vh; /* Для демонстрации прокрутки */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            position: relative;
+            overflow: auto;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            background: white;
+        }
+
+        th {
+            background: #f2f2f2;
+            position: sticky;
+            top: 0; /* Закрепляем заголовок таблицы */
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        td:first-child {
+            position: sticky;
+            left: 0; /* Закрепляем первый столбец */
+            background: #f2f2f2; /* Цвет фона первого столбца */
+            z-index: 1; /* Обеспечиваем, чтобы первый столбец был выше других ячеек */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Таблица с фиксированными заголовками и столбцами</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Возраст</th>
+            <th>Город</th>
+            <th>Страна</th>
+            <th>Профессия</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Иван</td>
+            <td>25</td>
+            <td>Москва</td>
+            <td>Россия</td>
+            <td>Инженер</td>
+        </tr>
+        <tr>
+            <td>Анна</td>
+            <td>30</td>
+            <td>Киев</td>
+            <td>Украина</td>
+            <td>Дизайнер</td>
+        </tr>
+        <tr>
+            <td>Петр</td>
+            <td>28</td>
+            <td>Минск</td>
+            <td>Беларусь</td>
+            <td>Программист</td>
+        </tr>
+        <tr>
+            <td>Мария</td>
+            <td>22</td>
+            <td>Таллин</td>
+            <td>Эстония</td>
+            <td>Менеджер</td>
+        </tr>
+        <tr>
+            <td>Сергей</td>
+            <td>35</td>
+            <td>Рига</td>
+            <td>Латвия</td>
+            <td>Аналитик</td>
+        </tr>
+        <tr>
+            <td>Ольга</td>
+            <td>27</td>
+            <td>Вильнюс</td>
+            <td>Литва</td>
+            <td>Маркетолог</td>
+        </tr>
+        <tr>
+            <td>Дмитрий</td>
+            <td>31</td>
+            <td>Тбилиси</td>
+            <td>Грузия</td>
+            <td>Финансист</td>
+        </tr>
+        <tr>
+            <td>Елена</td>
+            <td>29</td>
+            <td>Ереван</td>
+            <td>Армения</td>
+            <td>Юрист</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
